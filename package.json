@@ -1,0 +1,28 @@
+{
+  "name": "ambassador",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "seed:ambassadors": "ts-node src/seeder/ambassador.seeder.ts",
+    "seed:products": "ts-node src/seeder/product.seeder.ts",
+    "seed:links": "ts-node src/seeder/link.seeder.ts",
+    "seed:orders": "ts-node src/seeder/order.seeder.ts",
+    "update:rankings": "ts-node src/seeder/rankings.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "nodemailer": "^6.7.2"
+  },
+  "devDependencies": {
+    "@types/kafkajs": "^1.9.0",
+    "@types/nodemailer": "^6.4.4",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.5.2"
+  }
+}

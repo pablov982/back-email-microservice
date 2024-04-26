@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: email-microservice
+  labels:
+    app: email-microservice
+    version: "1.0"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: email-microservice
+  template:
+    metadata:
+      labels:
+        app: email-microservice
+        version: "1.0"
+    spec:
+      containers:
+      - name: email-microservice
+        image: pablov982/email-microservice:latest
+        ports:
+        - name: http-server
+          containerPort: 3000
